@@ -8,7 +8,7 @@ const LoginScreen = ({navigation}) => {
       <Text>Login!</Text>
       <Button
         title="Click here"
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("HomeStack")}
       />
     </View>
   );
