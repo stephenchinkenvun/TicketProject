@@ -2,7 +2,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
 import { Text, View } from 'react-native';
 
-import TabNavigator from '../navigation/tabs'
 
 const HomeScreen = () => {
   return (
