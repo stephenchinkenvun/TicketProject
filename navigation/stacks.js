@@ -8,20 +8,13 @@ import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
 
 
-const Stack = createStackNavigator();
 
-const StackNavigator = () => {
+
+/* const StackNavigator = () => {
     return (
-        <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Onboarding" component={OnBoardingScreen} />
-                <Stack.Screen name="Register" component={RegisterScreen} />
-                <Stack.Screen name="Login" component={LoginScreen} />
-                <Stack.Screen name="Home" component={HomeScreen} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        
     );
 }
 
 export default StackNavigator;
-
+*/

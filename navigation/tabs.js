@@ -9,7 +9,6 @@ import HomeScreen from '../screens/HomeScreen';
 import BookingScreen from '../screens/BookingScreen';
 import ShowTicketScreen from '../screens/ShowTicketScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import OnBoardingScreen from '../screens/OnBoardingScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -49,12 +48,6 @@ const TabNavigator = () =>{
             }}/>
             <Tab.Screen name="Profile" component={ProfileScreen} options={{
                 tabBarLabel: 'Profile',
-                tabBarIcon: ({Color}) => (
-                    <MaterialCommunityIcons name="account" size={24} color="black" /> 
-                )
-            }}/>
-            <Tab.Screen name="OnBording" component={OnBoardingScreen} options={{
-                tabBarLabel: 'OnB',
                 tabBarIcon: ({Color}) => (
                     <MaterialCommunityIcons name="account" size={24} color="black" /> 
                 )
