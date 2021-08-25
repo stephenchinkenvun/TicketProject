@@ -1,22 +1,16 @@
 import React from 'react';
 import { Text, View, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 
-import RegisterScreen from './RegisterScreen';
-
-const OnBoardingStack = createStackNavigator();
-
 const OnBoardingScreen = ({navigation}) => {
   return (
         <Onboarding
-        onSkip={() => navigation.replace("Login")}
-        onDone={() => navigation.navigate("Login")}
+        onSkip={() => navigation.navigate("Register")}
+        onDone={() => navigation.navigate("Register")}
         pages={[
             {
                 backgroundColor: '#a6e4d0',

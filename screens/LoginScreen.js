@@ -2,13 +2,13 @@ import * as React from 'react';
 import { Button, Text, View } from 'react-native';
 
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Login!</Text>
       <Button
         title="Click here"
-        onPress={() => alert('Button Clicked!')}
+        onPress={() => navigation.navigate("Home")}
       />
     </View>
   );
