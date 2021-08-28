@@ -7,24 +7,26 @@ import OnBoardingScreen from './screens/OnBoardingScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import LoginScreen from './screens/LoginScreen';
 import TabNavigator from './navigation/tabs';
+import SeatScreen from './SeatScreen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
-  return(
+  return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Onboarding" component={OnBoardingScreen} /> 
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Onboarding" component={OnBoardingScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="HomeStack" component={TabNavigator} />
+        <Stack.Screen name="Seat" component={SeatScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
 const Root = () => {
-  return(
+  return (
     <NavigationContainer>
       <TabNavigator />
     </NavigationContainer>
