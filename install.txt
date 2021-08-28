@@ -1,0 +1,6 @@
+npm install @react-navigation/native
+npm install @react-navigation/bottom-tabs
+npm install @react-navigation/stack react-native-gesture-handler
+npm i react-native-onboarding-swiper
+npm install --save react-native-sqlite-storage
+
