@@ -28,7 +28,7 @@ app = Flask(__name__)
 def index():
     db = sqlite3.connect(DB)
     cursor = db.cursor()
-    cursor.execute('SELECT * FROM bus ORDER BY date')
+    cursor.execute('SELECT * FROM bus ORDER BY price')
     rows = cursor.fetchall()
 
     print(rows)

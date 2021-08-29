@@ -23,17 +23,17 @@ cursor = db.cursor()
 
 cursor.execute('''
     INSERT INTO bus(price,departure,arrival,departureTime,arrivalTime,day,date)
-    VALUES('2.00','A','B','09:30','10:00','Monday','30-08-2021')
+    VALUES('2.00','Kuala Lumpur','Selangor','09:30','10:00','Monday','30-08-2021')
 ''')
 
 cursor.execute('''
     INSERT INTO bus(price,departure,arrival,departureTime,arrivalTime,day,date)
-    VALUES('3.00','A','C','09:30','10:30','Monday','30-08-2021')
+    VALUES('3.00','Johor','Selangor','09:30','10:30','Monday','30-08-2021')
 ''')
 
 cursor.execute('''
     INSERT INTO bus(price,departure,arrival,departureTime,arrivalTime,day,date)
-    VALUES('2.00','B','C','10:00','10:30','Monday','30-08-2021')
+    VALUES('2.00','Penang','Perlis','10:00','10:30','Monday','30-08-2021')
 ''')
 
 db.commit()
