@@ -9,12 +9,13 @@ import {
 } from 'react-native';
 import { FloatingAction } from 'react-native-floating-action';
 
+
 let config = require('../Config');
 
 type Props = {};
 export default class ShowTicketScreen extends Component<Props> {
   static navigationOptions = {
-    title: 'Show',
+    title: 'Bus',
   };
 
   constructor(props) {
@@ -69,28 +70,21 @@ export default class ShowTicketScreen extends Component<Props> {
               onPress={() => {
                 this.props.navigation.navigate('Show', {
                   id: item.id,
-                  headerTitle: item.name,
+                  headerTitle: item.id,
                   refresh: this._load,
                 });
               }}>
               <View style={styles.item}>
                 <Text style={styles.itemTitle}>{item.departure}</Text>
-                <Text style={styles.itemSubtitle}>{item.arrival}</Text>
+                <Text style={styles.itemSubtitle}>...</Text>
+                <Text style={styles.itemTitle}>{item.arrival}</Text>
+                <Text style={styles.itemSubtitle}>{item.departureTime}                              -                         {item.arrivalTime}</Text>
+                <Text style={styles.itemSubtitle}>{item.date}</Text>
               </View>
             </TouchableHighlight>
           )}
           keyExtractor={item => {
             item.id.toString();
-          }}
-        />
-        <FloatingAction
-          actions={actions}
-          overrideWithAction={true}
-          color={'#a80000'}
-          onPressItem={() => {
-            this.props.navigation.navigate('Store', {
-              refresh: this._load,
-            });
           }}
         />
       </View>

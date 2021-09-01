@@ -39,6 +39,9 @@ export default class HomeScreen extends Component<Props> {
     });
   }
 
+  search(){
+    
+  }
   _store() {
     let url = config.settings.serverPath + '/api/bus';
 
@@ -86,7 +89,7 @@ export default class HomeScreen extends Component<Props> {
   render() {
     const { selectedStartDate } = this.state;
     const startDate = selectedStartDate ? selectedStartDate.toString() :
-      '';
+      ''; 
     return (
       <ScrollView style={styles.container}>
         <Text style={styles.text}> Bus Ticket Booking</Text>
@@ -100,6 +103,7 @@ export default class HomeScreen extends Component<Props> {
           onValueChange={(itemValue, itemIndex) => {
             this.setState({ departure: itemValue });
           }}
+          
           orientation={'vertical'}
           textStyle={{ fontSize: 24 }}
         />

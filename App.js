@@ -7,7 +7,7 @@ import OnBoardingScreen from './screens/OnBoardingScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import LoginScreen from './screens/LoginScreen';
 import TabNavigator from './navigation/tabs';
-import SeatScreen from './SeatScreen';
+import ShowScreen from './screens/ShowScreen';
 
 const Stack = createStackNavigator();
 
@@ -19,7 +19,7 @@ const App = () => {
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="HomeStack" component={TabNavigator} />
-        <Stack.Screen name="Seat" component={SeatScreen} />
+        <Stack.Screen name="Show" component={ShowScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
