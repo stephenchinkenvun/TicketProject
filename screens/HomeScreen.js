@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import { Alert, StyleSheet, ScrollView, View, Text, Button } from 'react-native';
 import { InputWithLabel, PickerWithLabel, AppButton } from '../UI';
-import {
-  Calendar
-  , CalendarList
-  , Agenda
-} from 'react-native-calendars';
-import CalendarStrip from 'react-native-slideable-calendar-strip';
 import CalendarPicker from 'react-native-calendar-picker';
-import { set } from 'react-native-reanimated';
 
 let config = require('../Config');
 let common = require('./CommonData');
@@ -29,7 +22,7 @@ export default class HomeScreen extends Component<Props> {
       departureTime: '',
       arrivalTime: '',
       day: '',
-      date: '01',
+      date: '',
     };
 
     this.state = {
@@ -84,17 +77,12 @@ export default class HomeScreen extends Component<Props> {
         }
 
         this.props.navigation.getParam('refresh')();
-        this.props.navigation.goBack();
+        this.props.navigation.navigate('Show');
       })
       .catch(error => {
         console.error(error);
       });
   }
-
-  _search() {
-
-  }
-
   render() {
     const { selectedStartDate } = this.state;
     const startDate = selectedStartDate ? selectedStartDate.toString() :
@@ -127,6 +115,18 @@ export default class HomeScreen extends Component<Props> {
           orientation={'vertical'}
           textStyle={{ fontSize: 24 }}
         />
+        <PickerWithLabel
+          style={styles.picker}
+          label={'Choose a time'}
+          items={common.departureTime}
+          mode={'dialog'}
+          value={this.state.departureTime}
+          onValueChange={(itemValue, itemIndex) => {
+            this.setState({ departureTime: itemValue });
+          }}
+          orientation={'vertical'}
+          textStyle={{ fontSize: 24 }}
+        />
         <Text style={styles.text}>Choose a date</Text>
         <View style={styles.container}>
           <CalendarPicker
@@ -136,12 +136,11 @@ export default class HomeScreen extends Component<Props> {
             }}
           />
         </View>
-
         <AppButton
           style={styles.button}
-          title={'Search Bus'}
+          title={'Book'}
           theme={'primary'}
-          onPress={this._search}
+          onPress={this._store}
         />
       </ScrollView>
     );

@@ -41,21 +41,13 @@ exports.arrivals = [
 ];
 
 
-exports.dates = [
-  { key: '01', value: '01-09-2021' },
-  { key: '02', value: '02-09-2021' },
-  { key: '03', value: '03-09-2021' },
-  { key: '14', value: '04-09-2021' },
-  { key: '15', value: '05-09-2021' },
-  { key: '04', value: '06-09-2021' },
-  { key: '05', value: '07-09-2021' },
-  { key: '06', value: '08-09-2021' },
-  { key: '07', value: '09-09-2021' },
-  { key: '08', value: '10-09-2021' },
-  { key: '09', value: '11-09-2021' },
-  { key: '16', value: '12-09-2021' },
-  { key: '12', value: '13-09-2021' },
-  { key: '13', value: '14-09-2021' },
-  { key: '10', value: '15-09-2021' },
-  { key: '11', value: '16-09-2021' },
+exports.departureTime = [
+  { key: '01', value: '08:30AM' },
+  { key: '02', value: '09:30AM' },
+  { key: '03', value: '10:30AM' },
+  { key: '04', value: '11:30AM' },
+  { key: '05', value: '01:30PM' },
+  { key: '06', value: '02:30PM' },
+  { key: '07', value: '03:30PM' },
+  { key: '08', value: '04:30PM' },
 ];
