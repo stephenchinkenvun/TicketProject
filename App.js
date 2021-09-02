@@ -7,28 +7,25 @@ import OnBoardingScreen from './screens/OnBoardingScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import LoginScreen from './screens/LoginScreen';
 import TabNavigator from './navigation/tabs';
+import ShowScreen from './screens/ShowScreen';
+import ShowTicketScreen from './screens/ShowTicketScreen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
-  return(
+  return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Onboarding" component={OnBoardingScreen} /> 
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Onboarding" component={OnBoardingScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="HomeStack" component={TabNavigator} />
+        <Stack.Screen name="Show" component={ShowScreen} />
+        <Stack.Screen name="Ticket" component={ShowTicketScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-const Root = () => {
-  return(
-    <NavigationContainer>
-      <TabNavigator />
-    </NavigationContainer>
-  )
-}
 
 export default App;
